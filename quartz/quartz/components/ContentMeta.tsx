@@ -55,6 +55,8 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
   }
 
   ContentMetadata.css = style
+  ContentMetadata.afterDOMLoaded = `$( 'pre' ).addClass( 'prettyprint' );
+        PR.prettyPrint()`
 
   return ContentMetadata
 }) satisfies QuartzComponentConstructor

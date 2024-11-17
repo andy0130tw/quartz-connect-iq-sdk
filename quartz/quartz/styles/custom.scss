@@ -1,3 +1,23 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+#quartz-body > .center :where(img, svg) {
+  background: white;
+}
+
+#quartz-body > .center :where(svg.external-icon, .clipboard-button > svg, a.internal > svg, xxx) {
+  background: transparent;
+}
+
+pre {
+  &.prettyprinted {
+    background: #ddd;
+    overflow: hidden;
+  }
+}
+
+pre > code {
+  display: block;
+  margin: 0 8px;
+}

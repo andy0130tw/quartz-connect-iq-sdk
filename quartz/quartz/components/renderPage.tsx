@@ -222,6 +222,14 @@ export function renderPage(
     <html lang={lang}>
       <Head {...componentData} />
       <body data-slug={slug}>
+        <link
+          href="../resources/programmers-guide/google-code-prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet"
+        />
+        <script src="../resources/programmers-guide/jquery-1.11.3.min.js"></script>
+        <script src="../resources/programmers-guide/google-code-prettify/run_prettify.js"></script>
+
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}

@@ -1,3 +1,4 @@
+export { MakeItAllHTML } from "./make-it-all-html"
 export { FrontMatter } from "./frontmatter"
 export { GitHubFlavoredMarkdown } from "./gfm"
 export { Citations } from "./citations"

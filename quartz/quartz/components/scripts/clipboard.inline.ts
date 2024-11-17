@@ -7,7 +7,7 @@ document.addEventListener("nav", () => {
   const els = document.getElementsByTagName("pre")
   for (let i = 0; i < els.length; i++) {
     const codeBlock = els[i].getElementsByTagName("code")[0]
-    if (codeBlock) {
+    if (codeBlock && !els[i].querySelector(".clipboard-button")) {
       const source = codeBlock.innerText.replace(/\n\n/g, "\n")
       const button = document.createElement("button")
       button.className = "clipboard-button"
