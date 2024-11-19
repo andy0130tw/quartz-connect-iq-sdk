@@ -7,7 +7,7 @@ document.addEventListener("nav", () => {
   const els = document.getElementsByTagName("pre")
   for (let i = 0; i < els.length; i++) {
     const codeBlock = els[i].getElementsByTagName("code")[0]
-    if (codeBlock && !els[i].querySelector(".clipboard-button")) {
+    if (codeBlock) {
       const source = codeBlock.innerText.replace(/\n\n/g, "\n")
       const button = document.createElement("button")
       button.className = "clipboard-button"
@@ -32,4 +32,7 @@ document.addEventListener("nav", () => {
       els[i].prepend(button)
     }
   }
+
+  ;(window as any).$("pre").addClass("prettyprint")
+  ;(window as any).PR.prettyPrint()
 })

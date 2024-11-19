@@ -40,6 +40,15 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+
+        <link
+          href="../resources/programmers-guide/google-code-prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet"
+        />
+        <script src="../resources/programmers-guide/jquery-1.11.3.min.js"></script>
+        <script src="../resources/programmers-guide/google-code-prettify/run_prettify.js"></script>
+
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
